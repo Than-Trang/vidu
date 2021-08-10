@@ -470,6 +470,8 @@ h3 {
         position: absolute;
         transform: translate(0, 40px);
         width: 50%;
+        margin-left: -15px;
+        margin-right: 0;
         height: auto;
     }
     .menu-mobile a {
@@ -512,6 +514,9 @@ h3 {
     }
     .icon-contact{
         margin-top: 5px;
+    }
+    .menu-mobile{
+        width: 100%;
     }
     .top-header{
         display: flex;
