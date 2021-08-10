@@ -6,10 +6,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
     <link rel="stylesheet" href="./style.css">
+    <script src="https://code.jquery.com/jquery-latest.js"></script>
     <title>Go fun</title>
 </head>
 <body>
     <div class="page">
+        <div class="section-chat">
+            
+            <div class="section-box-chat">
+                <div class="box-chat">
+                    <div class="header-box-chat">
+                        <div class="khoi1">
+                            <img src="images/avatar.jpg">
+                            <p>Jena</p>
+                        </div>
+                        <div class="khoi2">
+                            <div class="menu-dot">
+                                <i class="fas fa-ellipsis-h"></i>
+                            </div>
+                            <div class="exit-box-chat">
+                                <i class="fas fa-times"></i>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="content-box-chat">
+                        <div class="messages-content">
+                            <div class="massage new">
+                                <figure class="avatar">
+                                    <img src="images/avatar.jpg">
+                                </figure>
+                                <span>Hello</span>
+                            </div>
+                            <div class="massage-person new">
+                                <p>Hi, Can I help you?</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="bottom-box-chat">
+                        <textarea class="message-input" type = "text" placeholder="Nhập tin nhắn"></textarea>
+                        <button type="submit" class="message-submit">Gửi</button>
+                    </div>
+                </div>
+            </div>
+            <button class="chat" id="circle-chat">
+                <i class="fab fa-facebook-messenger fa-3x"></i>
+            </button>
+            
+        </div>
         <div class="container">
             <header class="header">
                 <div class="section-top-header">
@@ -31,19 +76,192 @@
                 </div>
                 <div class="menu">
                     <nav class="nav-menu">
-                        <li><a href="#">Trang chủ</a></li>
-                        <li><a href="#">blog</a></li>
-                        <li><a href="#">contact</a></li>
+                        <ul class="ul-menu" id="ul-menu">
+                            <li><a class="item-menu" href="#">Trang chủ</a></li>
+                            <li><a class="item-menu" href="#">blog</a></li>
+                            <li><a class="item-menu" href="#">contact</a></li>
+                        </ul>
                     </nav>
+                    <button class="btn-menu" onclick="AddMenuMobile()"><i class="fas fa-bars fa-2x"></i></button>
                 </div>
             </header>
             <div class="section-content">
-
+                <div class="section-banner">
+                    <div class="banner">
+                        <h1 class="h1-banner">Welcome to gofun</h1>
+                        <p class="text-banner">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque rem distinctio soluta illum iusto dignissimos enim? Minus autem nesciunt natus est saepe incidunt! Ut, blanditiis culpa? Voluptatem aperiam reprehenderit impedit.
+                        </p>
+                        <button class="btn-banner">
+                            start now
+                        </button>
+                    </div>
+                </div>
+                <div class="section-center-content">
+                    <div class="section-introduction">
+                        <div class="introduction">
+                            <h2 style="font-size: 45px;">Giới thiệu</h2>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus officiis sint inventore rerum, ab minus laboriosam! Rem consequuntur eius ipsam similique exercitationem reprehenderit quae explicabo, numquam nemo facilis eveniet porro.</p>
+                        </div>
+                    </div>
+                    <div class="center-content">
+                        <div class="content">
+                            <div class="article">
+                                <h3 class="tieu-de-article">Lorem ipsum dolor sit amet</h3>
+                                <div class="date-time">August 7, 2021</div>
+                                <img src="images/article.jpg" alt="" class="img-article">
+                                <p class="text-article">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ab laboriosam nostrum voluptatem ex doloremque impedit excepturi veritatis obcaecati reprehenderit nulla eius tenetur deleniti, ipsam expedita ipsa odit! Fuga, voluptatem ab!
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia hic minima in molestias error excepturi consequatur iure eum repellendus illum. Veritatis quos recusandae est vitae atque pariatur nostrum, ipsam sunt.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit rem tempora, nobis sapiente laborum unde aut et cumque aliquid optio eligendi magni labore, similique commodi quo eos. Distinctio, ex vitae.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste modi quisquam ratione hic recusandae alias voluptates, eaque corporis eum numquam in quidem est natus reiciendis laborum? Impedit cumque quisquam doloremque!logo
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique sequi repellat accusantium distinctio. Nesciunt, dolorum harum accusantium reiciendis facere ratione illum temporibus repellat sunt. Eligendi vitae enim expedita facere possimus.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit facilis voluptatem velit aliquid perferendis veritatis omnis? Ex, illo in. Necessitatibus debitis autem perferendis laudantium, consequuntur iure provident fugit illo dolorem.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda repellendus optio quasi consectetur vero distinctio labore consequatur ex rem deserunt nam dolor perferendis debitis illum fugiat architecto eaque, minus officiis.
+    
+                                </p>
+                            </div>
+                            <div class="sidebar">
+                                <div class="section-sidebar">
+                                    <div class="sidebar-box ">
+                                        <h2 class="section-title1">Danh mục</h2>
+                                        <div class="section-menu-sidebar">
+                                            <ul class="sub-menu-categories">
+                                                <li><a href="#">News <span class="so">(10)</span></a></li>
+                                                <li><a href="#">Lifestyle <span>(5)</span></a></li>
+                                                <li><a href="#">Journals <span>(20)</span></a></li>
+                                                <li><a href="#">Videos <span>(8)</span></a></li>
+                                                <li><a href="#">Galleries <span>(24)</span></a></li>
+                                                <li><a href="#">Thoughs <span>(12)</span></a></li>
+                                            </ul>
+                                            
+                                        </div>
+                                    </div>
+                                    <div class="sidebar-box tag">
+                                        <h2 class="section-title2">Tags</h2>
+                                        <div class="link">
+                                            <a href="#" class="link1"><span>Thoughs</span></a><a href="#" class="link1">
+                                            <span>Galenes</span></a><a href="#" class="link1">
+                                            <span>Video</span></a><a href="#" class="link1">
+                                            <span>Tours&journals</span></a><a href="#" class="link1">
+                                            <span>Life style</span></a><a href="#" class="link1">
+                                            <span>News</span></a>
+                                        </div>
+    
+                                    </div>
+                                </div>
+    
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+                <div class="section-article-new">
+                    <div class="article-new">
+                        <h2 class="title-article-new">Bài viết mới nhất</h2>
+                        <div class="container-article-new">
+                            <div class="item-article-new">
+                                <img src="images/1.jpg" alt="" class="img-article-new">
+                                <h3>Lorem ipsum dolor sit amet</h3>
+                                <p class="date-time">August 7, 2021</p>
+                                <p class="text-article-new">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nesciunt et pariatur enim nostrum sequi? Impedit temporibus facilis, saepe enim eaque illum dignissimos tempore assumenda, quos rerum facere non quas?...
+                                </p>
+                            </div>
+                            <div class="item-article-new">
+                                <img src="images/2.jpg" alt="" class="img-article-new">
+                                <h3>Lorem ipsum dolor sit amet</h3>
+                                <p class="date-time">August 7, 2021</p>
+                                <p class="text-article-new">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nesciunt et pariatur enim nostrum sequi? Impedit temporibus facilis, saepe enim eaque illum dignissimos tempore assumenda, quos rerum facere non quas?...
+                                </p>
+                            </div>
+                            <div class="item-article-new">
+                                <img src="images/3.gif" alt="" class="img-article-new">
+                                <h3>Lorem ipsum dolor sit amet</h3>
+                                <p class="date-time">August 7, 2021</p>
+                                <p class="text-article-new">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur nesciunt et pariatur enim nostrum sequi? Impedit temporibus facilis, saepe enim eaque illum dignissimos tempore assumenda, quos rerum facere non quas?...
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
-            <div class="footer">
-
-            </div>
+            <footer class="section-footer">
+                <div class="content-footer">
+                    <div class="section-footer2">
+                        <div class="footer2">
+                            <div class="contact-us">
+                                <p class="title-footer2">contact us</p>
+                                <div class="line-contact">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <p class="text-text-contact"> 200 Lincoln Ave, Salinas, CA 93901</p>
+                                </div>
+                                <div class="line-contact">
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    <p class="text-text-contact">023 32423 223</p>
+                                </div>
+                                <div class="line-contact">
+                                    <i class="fas fa-envelope"></i>
+                                    <p class="text-text-contact">gymax@example.com</p>
+                                </div>
+                                <div class="line-contact">
+                                    <i class="far fa-clock"></i>
+                                    <p class="text-contact">9:00 - 20:00 All day</p>
+                                </div>
+                            </div>
+                            <div class="my-account">
+                                <p class="title-footer2">my account</p>
+                                 <p class="text-footer2">My account</p>
+                                 <p class="text-footer2">check out</p>
+                                 <p class="text-footer2">register</p>
+                                 <p class="text-footer2">Login</p>  
+                            </div>
+                            <div class="information">
+                                <p class="title-footer2">information</p>
+                                <p class="text-footer2">About us</p>
+                                <p class="text-footer2">Contact us</p>
+                                <p class="text-footer2">Terms of user</p>
+                                <p class="text-footer2">Privacy Policy</p>
+                            </div>
+                            <div class="quick-link">
+                                <p class="title-footer2">quick link</p>
+                                <p class="text-footer2">New user</p>
+                                <p class="text-footer2">Help center</p>
+                                <p class="text-footer2">Report spam</p>
+                                <p class="text-footer2">FAQs</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom-footer">
+                        <p>sologan of gofun</p>
+                </div>
+            </footer>
         </div>
     </div>
+    <script>
+        function AddMenuMobile(){
+            var menu = document.getElementById("ul-menu");
+            if(menu.className === "ul-menu"){
+                menu.className += " "+ "menu-mobile"
+            }
+            else{
+                menu.className = "ul-menu";
+            }
+        }
+        $("#circle-chat").click(function() {    
+            $("#circle-chat").toggle('scale');
+            $(".section-box-chat").toggle('scale');
+            $('.section-chat').addClass('height-section-chat');
+        })
+        $(".exit-box-chat").click(function() {
+            $("#circle-chat").toggle('scale');
+            $(".section-box-chat").toggle('scale');
+            $('.section-chat').removeClass('height-section-chat');
+        })
+    </script>
 </body>
 </html>
