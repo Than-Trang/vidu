@@ -254,13 +254,11 @@
         }
         $("#circle-chat").click(function() {    
             $("#circle-chat").toggle('scale');
-            $(".section-box-chat").toggle('scale');
-            $('.section-chat').addClass('height-section-chat');
+            $('.section-box-chat').addClass('opened');
         })
         $(".exit-box-chat").click(function() {
             $("#circle-chat").toggle('scale');
-            $(".section-box-chat").toggle('scale');
-            $('.section-chat').removeClass('height-section-chat');
+            $('.section-box-chat').removeClass('opened');
         })
     </script>
 </body>
