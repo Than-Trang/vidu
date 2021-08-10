@@ -109,7 +109,7 @@
     background-color: rgb(175, 8, 8);
     color: #fff;
 }
-.section-box-chat.opended {
+.section-box-chat.opened {
     opacity: 1;
     visibility: visible;
     transform: none;
